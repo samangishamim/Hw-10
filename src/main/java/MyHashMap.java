@@ -1,10 +1,11 @@
 import java.util.LinkedList;
 
 public class MyHashMap<K, V> {
-    private static final int SIZE = 16;
+    private static final int SIZE = 5;
     private LinkedList<Entry<K, V>>[] table;
 
     public MyHashMap() {
+
         table = new LinkedList[SIZE];
     }
 
@@ -14,7 +15,7 @@ public class MyHashMap<K, V> {
             table[hash] = new LinkedList<>();
         }
 
-        for (Entry<K, V> entry : table[hash]) {
+        for (Entry<K, V> entry : table[hash]) {  // table [0],table [1],table [2],table [3],table [4]
             if (entry.getKey().equals(key)) {
                 entry.setValue(value);
                 return;
