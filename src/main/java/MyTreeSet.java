@@ -5,6 +5,7 @@ public class MyTreeSet {
     public static void main(String[] args) {
 
     }
+
     public static TreeSet<Character> getRandomCharacterSet() {
         TreeSet<Character> set = new TreeSet<>();
         Random random = new Random();
@@ -14,6 +15,7 @@ public class MyTreeSet {
         }
         return set;
     }
+
     public static TreeSet<Character> findUnion(TreeSet<Character> set1, TreeSet<Character> set2) {
         TreeSet<Character> unionSet = new TreeSet<>(set1);
         unionSet.addAll(set2);
@@ -21,4 +23,9 @@ public class MyTreeSet {
     }
 
 
+    public static TreeSet<Character> findCommonality(TreeSet<Character> set1, TreeSet<Character> set2) {
+        TreeSet<Character> commonSet = new TreeSet<>(set1);
+        commonSet.retainAll(set2);
+        return commonSet;
+    }
 }
