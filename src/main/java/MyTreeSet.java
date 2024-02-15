@@ -14,4 +14,11 @@ public class MyTreeSet {
         }
         return set;
     }
+    public static TreeSet<Character> findUnion(TreeSet<Character> set1, TreeSet<Character> set2) {
+        TreeSet<Character> unionSet = new TreeSet<>(set1);
+        unionSet.addAll(set2);
+        return unionSet;
+    }
+
+
 }
