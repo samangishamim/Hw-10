@@ -1,8 +1,19 @@
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Anagram {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the first word: ");
+        String word1 = input.next();
+        System.out.println("Enter the second word: ");
+        String word2 = input.next();
 
+        if (checkAnagrams(word1, word2)) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
     }
 
     public static boolean checkAnagrams(String word1, String word2) {
